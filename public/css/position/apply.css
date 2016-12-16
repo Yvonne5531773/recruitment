@@ -1,0 +1,188 @@
+* {
+  border:0px;
+  margin:0px;
+}
+.main-container{
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    /*margin-bottom: 2rem !important;*/
+}
+.content-title{font-size:2rem;color:#32abff;margin-top:1.1rem;text-align:center;}
+.form-block{margin-top:1.1rem;box-shadow: 0 18px 66px rgba(176,210,240,.57);padding: 15px 30px 15px 30px;}
+.btn-shadow-effect{
+    box-shadow: 0 33px 66px rgba(63,191,255,.55) !important;
+    background-image: -webkit-linear-gradient(top, rgba(3,0,0,.2), rgba(255,255,255,.2)) !important;
+}
+.circular-corner-btn {
+    display: inline-block;
+    position: relative;
+    margin: 0.625rem;
+    padding: 0 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    font: bold 0.75rem/1.5625rem Arial, sans-serif;
+
+    text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    border-color: #a1d9ff;
+    color: #ffffff;
+    background-color: #32abff;
+}
+.big {
+    padding: 0 2.5rem;
+    padding-top: 0.625rem;
+    height: 2.813rem;
+    text-transform: uppercase;
+    font: bold 1.25rem/1.375rem Arial, sans-serif;
+}
+
+.big span {
+    display: block;
+    text-transform: none;
+    font: italic normal 0.75rem/1.125rem Georgia, sans-serif;
+    text-shadow: 1px 1px 1px rgba(255,255,255, .12);
+}
+.submit-btn{
+    text-align:center;
+}
+.none-box-input{
+    border-top-style: none !important;
+    border-right-style: none !important;
+    border-left-style: none !important;
+    border-bottom-style: solid !important;
+    -webkit-box-shadow: none !important;
+    border-radius:0px !important;
+    font-size: 1.6rem !important;
+    height:4rem !important;
+    color: #767983 !important;
+}
+::-webkit-input-placeholder{
+    color: #b9bdcd !important;
+    opacity: 0.5;
+}
+.label-apply-form {
+    color: #b9bdcd;
+    font-size: 1.5rem;
+    height:1.8rem;
+    margin-bottom: 0px;
+}
+
+/** checkbox switch **/
+.switch {
+    cursor: pointer;
+}
+
+.switch input {
+    display: none;
+}
+.switch i {
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 20px;
+    transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
+    border-radius: 20px;
+    /*box-shadow: inset 0 0 1px rgba(0,0,0,.5);*/
+    background-color: white;
+    position: relative;
+    top: 5px;
+
+    box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px #ccc;
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px #ccc;
+}
+.switch i:before {
+    display: block;
+    content: '男';
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+
+}
+.switch :checked + i {
+    padding-right: 0;
+    padding-left: 20px;
+    box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px green;
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px green;
+
+}
+
+.switch.red :checked + i {
+    box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px red;
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px red;
+}
+
+.switch span.switch-text {
+    padding-left: 5px;
+}
+/*add pic*/
+a {
+    text-decoration:none !important;
+}
+.btn_addPic{
+    display: inline-block;
+    position: relative;
+    /*height: 39px;*/
+    overflow: hidden;
+    padding: 0 3rem;
+    border: 1px solid #EBEBEB;
+    background: none repeat scroll 0 0 #F3F3F3;
+    color: #999999;
+    font: 14px/39px 'MicroSoft Yahei','Simhei';
+    cursor: pointer;
+    text-align: center;
+    -webkit-border-radius: 2em;
+}
+.btn_addPic:hover em{
+    background-position:-19px 0;
+}
+.filePrew {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8.75rem;
+    height: 2.5rem;
+    cursor: pointer;
+    opacity: 0;
+    filter:alpha(opacity: 0);
+}
+.btnStyle {
+    width: 50%;
+    height: 2.5rem;
+    border: 0;
+    font-size: 1.5rem;
+    margin: 1rem;
+    /*font-family: */
+    letter-spacing: 0.2rem;
+    -webkit-border-radius: 2.813rem;
+    -moz-border-radius: 2.813rem;
+    border-radius: 2.813rem;
+}
+.blue {
+    color: white;
+    background-color: #44c4ff;
+    -webkit-box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    -moz-box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    background-image: -webkit-linear-gradient(bottom, #3abbff, #4fc9ff);
+    background-image: -moz-linear-gradient(bottom, #3abbff, #4fc9ff);
+}
+
+.form-control {
+    padding:0;
+}

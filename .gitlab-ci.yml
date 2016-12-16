@@ -1,0 +1,33 @@
+stages:
+  - build
+  - test
+  - package
+  - deploy
+
+deploy_docker_image_job:
+  only:
+    - rel
+  script:
+    - docker pull docker.cargosmart.com/os/node:4.4.5
+    - docker build -t ${CI_BUILD_REF} .
+    - docker tag ${CI_BUILD_REF} docker.cargosmart.com/app/ita-recruitment
+    - docker push docker.cargosmart.com/app/ita-recruitment
+    - docker tag docker.cargosmart.com/app/ita-recruitment docker.cloud.dachuanqi.cn/app/ita-recruitment
+    - docker push docker.cloud.dachuanqi.cn/app/ita-recruitment
+  stage: package
+  tags:
+    - runner-shell
+
+    
+
+upgrade_rancher_service_job:
+  only:
+    - rel
+  script:
+    - echo "Assume the racher-compose RANCHER_URL, RANCHER_ACCESS_KEY and RANCHER_SECRET_KEY have been config in gitlab project variable settings"
+    - rancher-compose --project-name ita-recruitment up -d --pull --upgrade web -u  --force-upgrade
+    - sleep 20
+    - rancher-compose --project-name ita-recruitment up -d --upgrade --confirm-upgrade web
+  stage: deploy
+  tags:
+    - runner-shell

@@ -1,0 +1,37 @@
+<section class="content-header">
+  <h1>近期投递情况</h1>
+    <ol class="breadcrumb">
+        <li><a ui-sref="home"><i class="fa fa-dashboard"></i> Home</a></li>
+    </ol>
+</section>
+
+<section class="content" ng-controller="homeController" ng-init="init()">
+   <div class="form-group row">
+
+    <div id="applyChart" class="col-md-8" style="width: 80%;height:400px;"></div>
+       <div class="col-md-2">
+           <label class="control-label">起始时间</label>
+           <p class="input-group">
+               <input type="text" class="form-control" uib-datepicker-popup="{{ datePickerOptions.format}}" ng-change="change()" ng-model="fromDate" is-open="datePickerOptions.popupFrom.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close"  />
+               <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="datePickerOptions.popupFrom.open()" ><i class="glyphicon glyphicon-calendar"></i></button>
+               </span>
+           </p>
+       </div>
+       <div class="col-md-2">
+           <label class="control-label">结束时间</label>
+           <p class="input-group">
+               <input type="text" class="form-control" uib-datepicker-popup="{{ datePickerOptions.format }}" ng-change="change()" ng-model="toDate" is-open="datePickerOptions.popupTo.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close"  />
+               <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="datePickerOptions.popupTo.open()"><i class="glyphicon glyphicon-calendar"></i></button>
+               </span>
+           </p>
+       </div>
+       <div class="col-md-4">
+           <button type="button" style="width:25%;margin-top:5px; margin-right:5px;" class="btn btn-primary  btn-block pull-left" ng-click="byMonth()">按月显示</button>
+           <button type="button" style="width:25%; margin-right:5px;" class="btn btn-primary  btn-block pull-left" ng-click="byDay()">按日期显示</button>
+           <button type="button" style="width:25%;" class="btn btn-primary  btn-block pull-left" ng-click="toggleShow()">{{show}}</button>
+       </div>
+   </div>
+
+</section>

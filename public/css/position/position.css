@@ -1,0 +1,115 @@
+section {
+    width: 100%;
+    box-shadow: 0 7px 23px rgba(176, 210, 240, .57);
+    margin-top: 0.3rem;
+    overflow-x: hidden;
+}
+
+.img {
+    float: left;
+    margin: 8px 8px;
+}
+
+.content {
+    width: 80%;
+    /*height: 80px;*/
+    margin-left: 80px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.title {
+    color: #32ABFF;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.icon {
+    font-size: 60px;
+    color: #32ABFF;
+}
+
+.detail {
+    color: #B8BCCC;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+
+/* iphone 6 Plus 414*736px */
+@media (min-width: 376px) and (max-width: 414px){
+    .content {
+        width: 80%;
+        margin-left: 100px;
+    }
+
+    .img {
+        margin: 8px 18px;
+    }
+
+}
+
+/* iphone 6 375*667px */
+ @media (min-width: 321px) and (max-width: 375px){
+    .img {
+        margin: 8px 15px;
+    }
+
+    .icon {
+        font-size: 3.1rem;
+    }
+
+    .detail {
+        font-size: 1.1rem;
+        margin-top: 10px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+}
+
+/* iphone 5 320*568px *//* iphone 4 320*480px */
+@media (min-width: 100px) and (max-width: 320px){
+    .img {
+        margin: 8px 14px;
+    }
+
+    .icon {
+        font-size: 3rem;
+    }
+
+    .detail {
+        font-size: 0.92rem;
+        margin-top: 10px;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+}
+
+.btnStyle {
+    height: 2em;
+    border: 0;
+    font-size: 1.6em;
+    margin: 0.5em;
+    /*font-family: */
+    letter-spacing: 0.2em;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    width: 40%;
+    font-weight: bold;
+    user-select: none;
+}
+
+.blue {
+    color: white;
+    background-color: #44c4ff;
+    -webkit-box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    -moz-box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    background-image: -webkit-linear-gradient(bottom, #3abbff, #4fc9ff);
+    background-image: -moz-linear-gradient(bottom, #3abbff, #4fc9ff);
+}

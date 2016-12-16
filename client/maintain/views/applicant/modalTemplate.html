@@ -1,0 +1,54 @@
+<div class="modal-body">
+  <form name="seekerForm">
+
+    <div class="form-group  ">
+      <div>
+        <label class="control-label">申请人</label>
+        <input type="text" name="name" class="form-control"
+               ng-model="seeker.name"
+               required maxlength="5" minlength="4">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div>
+        <label class="control-label">毕业学校</label>
+        <input type="text" name="school" class="form-control"
+               ng-model="seeker.school"
+               minlength="2"
+               maxlength="255"
+               required>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <div>
+      <label class="control-label">邮箱</label>
+      <input type="email" name="email" class="form-control"
+             ng-model="seeker.email"
+             minlength="6"
+             maxlength="255"
+             required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div>
+        <label class="control-label">联系电话</label>
+        <input type="number" name="phone" class="form-control"
+               ng-model="seeker.phone"
+               minlength="5"
+               maxlength="20"
+               required>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <button type="submit" class="btn  btn-primary" ng-click="submit(seekerForm.$valid)">保存</button>
+      <button type="reset" class="btn  btn-primary" ng-click="cancel()">取消</button>
+    </div>
+
+  </form>
+</div>

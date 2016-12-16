@@ -1,0 +1,159 @@
+.pointer-cursor:hover {
+    cursor: pointer;
+}
+
+.datetimepicker-wrapper > input {
+    margin-bottom: 0 !important;
+    width: 298px;
+}
+
+.edui-editor {
+    width: 100% !important;
+}
+
+.edui-editor-iframeholder {
+    width: 100% !important;
+}
+
+.ios-device {
+    background: #121212;
+    border: 1px solid #000;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.ios-device::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: block;
+}
+
+.ios-device__screen {
+    border-radius: 2px;
+    background: #222;
+    height: 100%;
+}
+
+.ios-device--white {
+    background: #fff;
+    border-color: #ddd;
+}
+
+.ios-device--white::after {
+    border-color: #ddd;
+}
+
+.iphone-6s-plus {
+    border-radius: 6px;
+    width: 78px;
+    height: 158px;
+    padding: 14px 3px;
+}
+
+.iphone-6s-plus--medium {
+    border-radius: 9px;
+    width: 117px;
+    height: 237px;
+    padding: 21px 4.5px;
+}
+
+.iphone-6s-plus--large {
+    border-radius: 12px;
+    width: 480px;
+    height: 705px;
+    padding: 28px 6px;
+}
+
+.ios-device--medium::after {
+    width: 12px;
+    height: 12px;
+    bottom: 4px;
+}
+
+.ios-device--large::after {
+    width: 16px;
+    height: 16px;
+    bottom: 5px;
+}
+
+.mobile-content {
+    border: 1px solid rgba(3, 12, 17, 0.21);
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    word-break: break-all;
+    margin: 0px !important;
+    background: white;
+}
+.login-input {
+    height: 50px;
+    font-size: 1.3em;
+    background-color: rgba(255, 255, 255, .6);
+}
+.btn-login {
+    width: 150px;
+    margin: 30px auto;
+}
+.login-title{
+    font-size: 2em;
+    color: #fff;
+    font-weight: 700;
+}
+.btn-action{
+    background-color: #5cb85c;
+    color: #fff;
+    border-color: #4cae4c;
+}
+.background{
+    background: url(../../../img/lb.jpg) no-repeat fixed 50% 50%;
+    background-size:cover;
+}
+.fullscreen{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-height: 100%;
+    z-index: 9999;
+}
+
+#fullscreen-spinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 9999;
+    top:0;
+    left: 0;
+    margin : auto;
+    /*left: auto;*/
+    vertical-align:middle;
+    text-align: center;
+    /*padding-top: 300px;*/
+}
+
+#fullscreen-spinner .spinner-content {
+    position: relative;
+    /*vertical align*/
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    color:white;
+    font-size: 1.2em;
+
+}
+
+#fullscreen-spinner .spinner-text {
+    margin-top: 20px;
+}

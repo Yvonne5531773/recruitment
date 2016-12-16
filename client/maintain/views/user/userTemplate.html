@@ -1,0 +1,103 @@
+<div class="modal-body">
+  <!-- <div class="modal-content user_content_box"> -->
+  <div class="modal-header" style="margin-bottom: 20px;">
+    <h4 class="modal-title expireTitle">用户添加</h4>
+  </div>
+
+  <form name="user_create_form" novalidate>
+          <div class="form-group row">
+            <div class="col-md-2">
+              <label class="control-label">账户类型:<span style="color:red">*</span></label>
+            </div>
+
+            <div class="col-md-7">
+              <label class="radio-inline"><input type="radio" name="atRadio" ng-model="user.accountType" value="local" ng-click="setAccoutType(user.accountType)">Local</label>
+              <label class="radio-inline"><input type="radio" name="atRadio" ng-model="user.accountType" value="ldap" ng-click="setAccoutType(user.accountType)">Ldap</label>
+            </div>
+            <div class="col-md-3"
+                 ng-show="user_create_form.selectAccountTypeError">
+              <span>请选择一个角色创建</span>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-2">
+              <label class="control-label">角色:<span style="color:red">*</span></label>
+            </div>
+
+            <div class="col-md-7">
+              <label class="radio-inline"><input type="radio" name="roleRadio" ng-model="user.role" value="admin">Admin</label>
+              <label class="radio-inline"><input type="radio" name="roleRadio" ng-model="user.role" value="user">Normal User</label>
+            </div>
+            <div  class="col-md-3"
+                 ng-show="user_create_form.selectAccountTypeError">
+              <span>请选择一个角色创建</span>
+            </div>
+          </div>
+
+          <div  class="form-group row">
+            <div class="col-md-2">
+              <label class="control-label">用户ID :<span style="color:red">*</span></label>
+            </div>
+            <div class="col-md-7">
+            <input required name="userCreateDomainId" type="text" class="form-control" ng-readonly="isUpdateUserName"
+                   ng-model="user.userid"
+                   ng-blur="validationField(user.userid)"
+                   name="userid"/>
+              </div>
+
+            <div class="col-md-3" ng-show="user_create_form.userCreateDomainId.$error.required && user_create_form.userCreated">
+              <span ng-show="user_create_form.userCreateDomainId.$error.required" style="color:red">用户ID是必填字段</span>
+            </div>
+
+            <div class="col-md-3" ng-show="createUser_domainId_error_show">
+              <span style="color:red">Domain ID已存在</span>
+            </div>
+          </div>
+          <div  class="form-group row" ng-show="isLocal">
+            <div class="col-md-2">
+              <label class="control-label">密码 :<span style="color:red">*</span></label>
+            </div>
+            <div class="col-md-7">
+              <input required name="userCreatePassword" type="password" class="form-control"
+                     autocomplete="off"
+                     ng-model="user.password"
+                     name="password" required>
+            </div>
+
+            <div ng-if="isLocal" class="col-md-3"
+                 ng-show="user_create_form.userCreatePassword.$error.required && user_create_form.userCreated">
+              <span ng-show="user_create_form.userCreatePassword.$error.required" style="color:red">密码 是必填字段</span>
+            </div>
+          </div>
+          <div  class="form-group row" ng-show="isLocal">
+            <div class="col-md-2">
+              <label class="control-label">再次确认密码 :<span style="color:red">*</span></label>
+            </div>
+            <div class="col-md-7">
+            <input required name="userCreateConfirmPassword" type="password" class="form-control"
+                   autocomplete="off"
+                   ng-model="user.confirmPassword"
+                   name="confirmPassword" required>
+            </div>
+
+            <div ng-if="isLocal" class="errorMsgTip" class="col-md-3"
+                 ng-show="user_create_form.userCreateConfirmPassword.$error.required && user_create_form.userCreated">
+              <span ng-show="user_create_form.userCreateConfirmPassword.$error.required" style="color:red">请再次输入密码确认</span>
+            </div>
+            <div ng-if="isLocal" class="errorMsgTip" class="col-md-3"
+                 ng-show="user_create_form.userCreateConfirmPasswordNotSameAsBefore">
+              <span style="color:red">输入密码不一致</span>
+            </div>
+          </div>
+        <div class="modal-footer opn_btn expire_opn_box">
+          <button type="submit" class="btn  btn-primary"
+                  ng-disabled="(!createUsernameValidation)"
+                  ng-click="createNewUser()">Submit
+          </button>
+          <button type="reset" class="btn  btn-primary" ng-click="cancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+

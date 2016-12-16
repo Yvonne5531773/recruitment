@@ -1,0 +1,24 @@
+db:
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  image: docker.cloud.dachuanqi.cn/os/mongo:3.2.5
+  volumes:
+  - /home/csapp/ita-recruitment/db:/data/db
+  stdin_open: true
+web:
+  environment:
+    DB_1_PORT_27017_TCP_ADDR: db
+    PORT: '3000'
+  labels:
+    io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: fileupload=yes
+  command:
+    - dist
+  tty: true
+  image: docker.cloud.dachuanqi.cn/app/ita-recruitment
+  volumes:
+    - /nfsshare/recruitment/upload:/home/mean/public/upload
+    - /nfsshare/recruitment/logs:/home/mean/logs
+  links:
+  - db:db

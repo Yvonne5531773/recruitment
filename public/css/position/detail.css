@@ -1,0 +1,117 @@
+.head1 {
+    font-size: 2em;
+    color: #fff
+}
+
+.head2 {
+    font-size: 1.3em;
+    margin-top: 1em;
+    color: #fff;
+}
+
+.head-text {
+    text-shadow: 0 20px 30px #0088c7;
+    color: #fff;
+    margin-top: 0.8em
+}
+
+.icon-small {
+    font-size: 1.3em;
+    color: white;
+}
+
+.btnStyle {
+    height: 2em;
+    border: 0;
+    font-size: 1.6em;
+    margin: 0.5em;
+    /*font-family: */
+    letter-spacing: 0.2em;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    width: 40%;
+    font-weight: bold;
+    user-select: none;
+}
+
+.blue {
+    color: white;
+    background-color: #44c4ff;
+    -webkit-box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    -moz-box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    background-image: -webkit-linear-gradient(bottom, #3abbff, #4fc9ff);
+    background-image: -moz-linear-gradient(bottom, #3abbff, #4fc9ff);
+}
+
+.yellow {
+    color: #897700;
+    background-color: #edce00;
+    height: 1.5em;
+    font-size: 1em;
+    border-radius: 45px;
+    width: auto;
+    margin: 0.1em 0.2em 0.4em 0.1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.title {
+    font-size: 1.5em !important;
+    color: #32abff;
+    margin-bottom: 0em !important;
+}
+
+.head {
+    background-color: #32abff;
+    background-image: url('/img/building.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*height: auto;*/
+}
+
+.white-shadow {
+    color: #32abff;
+    background-color: #fff;
+    -webkit-box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    -moz-box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    box-shadow: 0 33px 66px rgba(63, 191, 255, .55);
+    border: solid 0.11em #8acfff;
+}
+
+.off {
+    background-color: #000000;
+}
+
+.hidDiv {
+    display: none;
+}
+
+.showDiv {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 100;
+    filter: Alpha(Opacity=70);
+    opacity: 0.85;
+}
+
+#divShow {
+    position: absolute;
+    z-index: 100;
+}
+
+.opacity-bg {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    filter: alpha(Opacity=50);
+    opacity: 0.9;
+}

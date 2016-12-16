@@ -1,0 +1,56 @@
+/* iphone 6 Plus 414*736px */
+@media screen and (max-height: 736px){
+  body {
+    background-position: 0% 140%;
+  }
+
+   p {
+    font-size: 1.5rem;
+  } 
+}
+
+/* iphone 6 375*667px */
+@media screen and (max-height: 667px){
+  body {
+    background-position: 0% 110%;
+  }
+
+  .header {
+    margin-top: 1.2rem;
+  }
+  
+  .middle {
+    flex-direction: column;
+    margin-top: -0.5rem; 
+  }
+
+   p {
+    font-size: 1.3rem;
+  } 
+}
+
+/* iphone 5 320*568px */
+@media screen and (max-height: 568px){
+  .icon {
+    font-size:7rem;
+    /*color: red;*/
+  }
+}
+
+/* iphone 4 320*480px */
+@media screen and (max-height: 480px){
+	body {
+    background-position: 0% 180%;
+  }
+
+  .icon {
+    font-size:6rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  } 
+}
+
+
+

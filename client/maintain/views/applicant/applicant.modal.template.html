@@ -1,0 +1,83 @@
+<div class="modal-body">
+  <form name="applicantDetails">
+    <div>
+
+    </div>
+    <div class="row">
+      <div class="col-xs-4 form-group">
+        <img class="img-responsive" src="{{selectedRow.photoUrl}}" onerror="this.src='img/default.jpg'" style="height:180px;">
+      </div>
+      <div class="col-xs-8 form-group">
+        <div class="form-group">
+          <label class="control-label">姓名</label>
+          <input type="text" name="name" class="form-control"
+                 ng-model="selectedRow.name"
+                 required maxlength="5" minlength="4" disabled>
+        </div>
+        <div class=form-group" style="margin-bottom:15px;">
+          <label class="control-label">联系电话</label>
+          <input type="text" name="phone" class="form-control"
+                 ng-model="selectedRow.phone"
+                 minlength="5"
+                 maxlength="20"
+                 required disabled>
+        </div>
+        <div class="form-group">
+          <label class="control-label">邮箱</label>
+          <input type="email" name="email" class="form-control"
+                 ng-model="selectedRow.email"
+                 minlength="6"
+                 maxlength="255"
+                 required disabled>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label">毕业学校</label>
+        <input type="text" name="school" class="form-control"
+               ng-model="selectedRow.school"
+               minlength="2"
+               maxlength="255"
+               required disabled>
+    </div>
+    <div class="form-group">
+      <label class="control-label">专业</label>
+      <input type="text" name="major" class="form-control"
+             ng-model="selectedRow.major"
+             minlength="2"
+             maxlength="255"
+             required disabled>
+    </div>
+    <div class="form-group">
+      <label class="control-label">最高学历</label>
+      <input type="text" name="educationalBackground" class="form-control"
+             ng-model="selectedRow.educationalBackground"
+             minlength="2"
+             maxlength="255"
+             required disabled>
+    </div>
+    <div class="form-group">
+      <label class="control-label">毕业时间</label>
+      <input type="text" name="graduationDate" class="form-control"
+             ng-model="selectedRow.graduationDateForDisplay"
+             minlength="2"
+             maxlength="255"
+             required disabled>
+    </div>
+    <div class="form-group">
+      <label class="control-label">申请职位</label>
+      <input type="text" name="positions" class="form-control"
+             ng-model="selectedRow.positions"
+             minlength="2"
+             maxlength="255"
+             required disabled>
+    </div>
+
+  </form>
+</div>
+
+<div class="modal-footer">
+  <!--<button type="submit" class="btn  btn-primary" ng-click="submit(seekerForm.$valid)">保存</button>-->
+  <button type="submit" class="btn  btn-primary" ng-click="ok()">确定</button>
+  <!--<button type="reset" class="btn  btn-primary" ng-click="cancel()">取消</button>-->
+</div>

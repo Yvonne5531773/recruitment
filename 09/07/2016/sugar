@@ -1,0 +1,3 @@
+
+
+var arr = Array.prototype.replace.call(new RegExp('\\s+'), ' ')
